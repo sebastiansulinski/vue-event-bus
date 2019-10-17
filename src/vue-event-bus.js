@@ -22,6 +22,14 @@ export default class VueEventBus {
         );
     }
 
+    unlisten(events, callback) {
+        this.wrapper(
+            events,
+            () => this.bus.$off(events, callback),
+            value => this.bus.$off(value, callback)
+        );
+    }
+
     wrapper(events, ifNotArray, otherwise) {
         if (!Array.isArray(events)) {
             ifNotArray();
