@@ -14,6 +14,7 @@
     "*.json",
     "*.js"
   ],
+  "deprecated": "This package is deprecated and no longer maintained.",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build --target lib --name vue-event-bus ./src/vue-event-bus.js",
